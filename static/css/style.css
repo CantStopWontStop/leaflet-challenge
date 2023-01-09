@@ -1,0 +1,45 @@
+html,
+body,
+#map-id {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.box{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9998;
+    text-align: center;
+    width: 100%;
+    border-width: 2px;
+   border-bottom-width:4px;
+   border-bottom-color:White;
+   border-bottom-style: solid;/* half of the width */
+   
+}
+
+.legendBox{
+  position: float;
+  height: 1px;
+  display: inline-block;
+  top: 0;
+  font-size:large;
+  color: white;
+  z-index: 9999;
+  text-align: center;
+  margin: .5em;
+  margin-bottom: 3rem;
+  /* width: 36px;
+  height: 36px;
+  -moz-border-radius: 36px;
+  -webkit-border-radius: 36px;
+  border-radius: 36px;
+  
+  border-width: 1px;
+  border-color:White;
+  border-style: solid; */
+}
+
