@@ -1,18 +1,18 @@
 function createMap(earthquakes) {
 
     // Create the tile layer that will be the background of our map.
-    var darkmap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-      attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-    });
-    var lightmap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-      maxZoom: 20,
-      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    // var darkmap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+    //   attribution: '© <a href="https://stadiamaps.com/">Stadia Maps</a>, © <a href="https://openmaptiles.org/">OpenMapTiles</a> © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    // });
+    var lightmap = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
   
     
     // Create a baseMaps object to hold the streetmap layer.
     var baseMaps = {
-      "Dark Mode": darkmap,
+      // "Dark Mode": darkmap,
       "Light Mode": lightmap
     };
   
@@ -25,7 +25,7 @@ function createMap(earthquakes) {
     var map = L.map("map-id", {
       center: [51.00, -100.63],
       zoom: 4,
-      layers: [darkmap, earthquakes]
+      layers: [lightmap, earthquakes]
     });
   
     // Create a layer control, and pass it baseMaps and overlayMaps. Add the layer control to the map.

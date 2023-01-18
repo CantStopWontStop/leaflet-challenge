@@ -16,7 +16,7 @@ body,
     width: 100%;
     border-width: 2px;
    border-bottom-width:4px;
-   border-bottom-color:White;
+   border-bottom-color:rgb(246, 118, 118);
    border-bottom-style: solid;/* half of the width */
    
 }
